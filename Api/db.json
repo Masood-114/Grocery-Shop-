@@ -1,0 +1,424 @@
+{
+  "products": [
+    {
+      "id": "6",
+      "name": "Shrimp",
+      "price": "3.5",
+      "category": "SeaFood",
+      "image": "/assets/shrimp.png"
+    },
+    {
+      "id": "7",
+      "name": "Kiwi",
+      "price": "2.5",
+      "category": "Fruits",
+      "image": "/assets/kiwi.png"
+    },
+    {
+      "id": "8",
+      "name": "Green Capsicum",
+      "price": "4.0",
+      "category": "Vegetables",
+      "image": "/assets/capsicum.png"
+    },
+    {
+      "id": "9",
+      "name": "Broccoli",
+      "price": "2.0",
+      "category": "Vegetables",
+      "image": "/assets/broccoli.png"
+    },
+    {
+      "id": "10",
+      "name": "Yogurt",
+      "price": "3.0",
+      "category": "Dairy",
+      "image": "/assets/yogurt.png"
+    },
+    {
+      "id": "11",
+      "name": "Beef",
+      "price": "8.0",
+      "category": "Meat",
+      "image": "/assets/beef.png"
+    },
+    {
+      "id": "12",
+      "name": "Chicken Breast",
+      "price": "7.0",
+      "category": "Meat",
+      "image": "/assets/chicken-breast.png"
+    },
+    {
+      "id": "13",
+      "name": "Kale Leaves",
+      "price": "3.0",
+      "category": "Vegetables",
+      "image": "/assets/kale.png"
+    },
+    {
+      "id": "14",
+      "name": "Mozzarella Cheese",
+      "price": "7.0",
+      "category": "Dairy",
+      "image": "/assets/cheese.png"
+    },
+    {
+      "id": "15",
+      "name": "Condensed Milk",
+      "price": "5.0",
+      "category": "Dairy",
+      "image": "/assets/condensed-milk.png"
+    },
+    {
+      "id": "16",
+      "name": "Salmon Filet",
+      "price": "4.0",
+      "category": "SeaFood",
+      "image": "/assets/salmon.png"
+    },
+    {
+      "id": "17",
+      "name": "Banana",
+      "price": "2.0",
+      "category": "Fruits",
+      "image": "/assets/banana.png"
+    },
+    {
+      "id": "18",
+      "name": "Milk Bottle (3)",
+      "price": "8.0",
+      "category": "Dairy",
+      "image": "/assets/milk.png"
+    },
+    {
+      "id": "19",
+      "name": "Pineapple",
+      "price": "5.0",
+      "category": "Fruits",
+      "image": "/assets/pineapple.png"
+    },
+    {
+      "id": "20",
+      "name": "Tofu Cubes",
+      "price": "4.0",
+      "category": "Dairy",
+      "image": "/assets/tofu.png"
+    },
+    {
+      "id": "21",
+      "name": "Tilapia Fish",
+      "price": "3.0",
+      "category": "SeaFood",
+      "image": "/assets/tilapia.png"
+    },
+    {
+      "id": "22",
+      "name": "Slice Cheese",
+      "price": "5.0",
+      "category": "Dairy",
+      "image": "/assets/slice-cheese.png"
+    },
+    {
+      "id": "23",
+      "name": "Ricotta Cheese",
+      "price": "7.0",
+      "category": "Dairy",
+      "image": "/assets/ricotta-cheese.png"
+    },
+    {
+      "id": "24",
+      "name": "Grapes",
+      "price": "3.0",
+      "category": "Fruits",
+      "image": "/assets/grapes.png"
+    },
+    {
+      "id": "25",
+      "name": "Lettuce Leaf",
+      "price": "3.0",
+      "category": "Vegetables",
+      "image": "/assets/lettuce.png"
+    }
+  ],
+  "professional": [
+    {
+      "id": "1",
+      "name": "Emily Johnson",
+      "profession": "Food Blogger",
+      "rating": 3,
+      "para": "FreshBasket is my go-to store for all grocery needs. Their produce is always fresh, and the delivery is super fast. I love the user-friendly interface and variety of organic options!",
+      "image": "/assets/customer1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Emily Johnson",
+      "profession": "Chef",
+      "rating": 4,
+      "para": "As a chef, quality ingredients are everything. FreshBasket consistently delivers the best vegetables, herbs, and pantry staples. Highly recommended!",
+      "image": "/assets/customer2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Alya Zahra",
+      "profession": "Model",
+      "rating": 5,
+      "para": "Shopping online with FreshBasket has saved me so much time. I trust them for my family's weekly groceries—always fresh, affordable, and reliable.",
+      "image": "/assets/customer3.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Carlos Mendes",
+      "profession": "Fitness Coach",
+      "rating": 2,
+      "para": "I appreciate the selection of healthy foods and clean-label products. FreshBasket has been a great partner in my wellness journey!",
+      "image": "/assets/customer4.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Natcha Phongchai",
+      "profession": "Nutritionist",
+      "rating": 1,
+      "para": "FreshBasket offers high-quality groceries at reasonable prices. Their organic section is impressive, and their customer service is top-notch.",
+      "image": "/assets/customer5.jpg"
+    }
+  ],
+  "category": [
+    {
+      "id": "1",
+      "title": "Fruits & Veggies",
+      "description": "Fresh, organic produce sourced daily from local farms. Explore a wide range of seasonal fruits and crisp vegetables.",
+      "image": "/assets/fruits-and-veggies.png",
+      "path": "/fruits"
+    },
+    {
+      "id": "2",
+      "title": "Dairy & Eggs",
+      "description": "Wholesome dairy products and free-range eggs. From creamy milk and yogurt to artisanal cheeses.",
+      "image": "/assets/dairy-and-eggs.png",
+      "path": "/dairy"
+    },
+    {
+      "id": "3",
+      "title": "Meat & SeaFood",
+      "description": "High-quality, responsibly sourced meat and seafood. Choose from fresh cuts, marinated options, and more.",
+      "image": "/assets/meat-and-seafood.png",
+      "path": "/seafood"
+    }
+  ],
+  "cart": [
+    {
+      "id": "f351b94f-2f3f-4086-8808-f3f3117b6c1c",
+      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
+      "items": []
+    }
+  ],
+  "invoice": [
+    {
+      "id": "bb3fc8d2-f013-43af-8586-8048f01f8e0e",
+      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
+      "items": [
+        {
+          "productId": "1",
+          "name": "Strawberry",
+          "price": 3,
+          "image": "/assets/strawberry.png",
+          "quantity": 1
+        },
+        {
+          "productId": "2",
+          "name": "Butter",
+          "price": 3.5,
+          "image": "/assets/butter.png",
+          "quantity": 5
+        },
+        {
+          "productId": "3",
+          "name": "Eggs",
+          "price": 2.5,
+          "image": "/assets/eggs.png",
+          "quantity": 5
+        },
+        {
+          "productId": "4",
+          "name": "Cabbage",
+          "price": 3,
+          "image": "/assets/cabbage.png",
+          "quantity": 1
+        },
+        {
+          "productId": "8",
+          "name": "Green Capsicum",
+          "price": 4,
+          "image": "/assets/capsicum.png",
+          "quantity": 1
+        }
+      ],
+      "total": 40,
+      "createAt": "2025-11-20T06:17:31.016Z",
+      "status": "PAID"
+    },
+    {
+      "id": "6ccb2a23-cfec-4cc3-bab3-f119b1bb3af6",
+      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
+      "items": [
+        {
+          "productId": "3",
+          "name": "Eggs",
+          "price": 2.5,
+          "image": "/assets/eggs.png",
+          "quantity": 11
+        }
+      ],
+      "total": 27.5,
+      "createAt": "2025-11-20T07:08:26.851Z",
+      "status": "PAID"
+    },
+    {
+      "id": "5ff2493b-1f26-4404-981c-37b6bfaadccd",
+      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
+      "items": [
+        {
+          "productId": "23",
+          "name": "Ricotta Cheese",
+          "price": 7,
+          "image": "/assets/ricotta-cheese.png",
+          "quantity": 10
+        }
+      ],
+      "total": 70,
+      "createAt": "2025-11-20T07:14:31.102Z",
+      "status": "PAID"
+    },
+    {
+      "id": "04785c6a-17ea-4c46-8a48-f3343344a860",
+      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
+      "items": [
+        {
+          "productId": "10",
+          "name": "Yogurt",
+          "price": 3,
+          "image": "/assets/yogurt.png",
+          "quantity": 2
+        },
+        {
+          "productId": "14",
+          "name": "Mozzarella Cheese",
+          "price": 7,
+          "image": "/assets/cheese.png",
+          "quantity": 2
+        },
+        {
+          "productId": "15",
+          "name": "Condensed Milk",
+          "price": 5,
+          "image": "/assets/condensed-milk.png",
+          "quantity": 2
+        }
+      ],
+      "total": 30,
+      "createAt": "2025-11-21T05:14:00.835Z",
+      "status": "PAID"
+    },
+    {
+      "id": "2f1bd37d-4e98-4289-a357-d939c42affaf",
+      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
+      "items": [
+        {
+          "productId": "12",
+          "name": "Chicken Breast",
+          "price": 7,
+          "image": "/assets/chicken-breast.png",
+          "quantity": 1
+        },
+        {
+          "productId": "11",
+          "name": "Beef",
+          "price": 8,
+          "image": "/assets/beef.png",
+          "quantity": 2
+        },
+        {
+          "productId": "16",
+          "name": "Salmon Filet",
+          "price": 4,
+          "image": "/assets/salmon.png",
+          "quantity": 1
+        }
+      ],
+      "total": 27,
+      "createAt": "2025-11-21T05:46:48.918Z",
+      "status": "PAID"
+    },
+    {
+      "id": "e185edc4-006c-40ee-8d03-ef1ab86b36b8",
+      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
+      "items": [
+        {
+          "productId": "6",
+          "name": "Shrimp",
+          "price": 3.5,
+          "image": "/assets/shrimp.png",
+          "quantity": 4
+        },
+        {
+          "productId": "7",
+          "name": "Kiwi",
+          "price": 2.5,
+          "image": "/assets/kiwi.png",
+          "quantity": 3
+        },
+        {
+          "productId": "8",
+          "name": "Green Capsicum",
+          "price": 4,
+          "image": "/assets/capsicum.png",
+          "quantity": 3
+        }
+      ],
+      "total": 33.5,
+      "createAt": "2025-11-21T06:56:25.622Z",
+      "status": "PAID"
+    },
+    {
+      "id": "012ffd4a-ac72-4ebf-8d92-b44da927cd65",
+      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
+      "items": [
+        {
+          "productId": "11",
+          "name": "Beef",
+          "price": 8,
+          "image": "/assets/beef.png",
+          "quantity": 1
+        }
+      ],
+      "total": 8,
+      "createAt": "2025-11-21T07:13:54.788Z",
+      "status": "PAID"
+    },
+    {
+      "id": "9e4f556a-bc29-47d4-870d-8148c4a88750",
+      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
+      "items": [
+        {
+          "productId": "7",
+          "name": "Kiwi",
+          "price": 2.5,
+          "image": "/assets/kiwi.png",
+          "quantity": 2
+        },
+        {
+          "productId": "8",
+          "name": "Green Capsicum",
+          "price": 4,
+          "image": "/assets/capsicum.png",
+          "quantity": 2
+        }
+      ],
+      "total": 13,
+      "createAt": "2025-11-27T12:08:57.566Z",
+      "status": "PAID"
+    }
+  ],
+  "registerUser": []
+}
