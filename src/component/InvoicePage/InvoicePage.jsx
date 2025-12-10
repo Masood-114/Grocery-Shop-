@@ -1,26 +1,47 @@
-import { useContext } from "react";
-import { CartContext } from "../../Context/CartContext";
 import { useNavigate } from "react-router";
 import Heading from "../Heading/Heading";
+import { useDispatch, useSelector } from "react-redux";
+import { saveInvoice } from "../../Features/Invoice/InvoiceSlice";
+import { deleteCartAndSave } from "../../Features/Cart/CartSlice";
+import { useState } from "react";
 
 const InvoicePage = () => {
-  const { cart, totalPrice, clearCart, invoiceData } = useContext(CartContext);
+  const { cart } = useSelector((state) => state.cart);
+  const [showModal, setShowModel] = useState(false);
+  const dispatch = useDispatch();
+
+  const totalPrice = cart?.items?.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0 || 0
+  );
+
   const navigate = useNavigate();
 
-  if (cart.items.length === 0) return;
-  function confirmOrder() {
-    invoiceData();
-    alert("✅ Order Confirmed!");
-    clearCart();
-    navigate("/thankyou");
-  }
+  const confirmOrder = () => {
+    if (cart?.items?.length === 0) return;
+
+    dispatch(saveInvoice(cart));
+
+    setShowModel(true);
+
+    setTimeout(() => {
+      dispatch(deleteCartAndSave());
+
+      setShowModel(false);
+
+      navigate("/");
+    }, 3000);
+  };
 
   return (
     <div className="max-w-[1400px] mx-auto py-20 px-10 sm:px-6 md:px-10 ">
-      <div className="md:pt-20 pt-10 bg-gray-100 pb-10 p-10 flex-1">
+      <div
+        className={`md:pt-20 pt-10 bg-gray-100 pb-10 p-10 flex-1 ${
+          showModal ? "filter blur-sm" : ""
+        } transition-all`}
+      >
         <Heading highlight="In" heading="voice"></Heading>
 
-        {/* Invoice Header */}
         <div
           style={{
             border: "1px solid #ccc",
@@ -42,7 +63,6 @@ const InvoicePage = () => {
           </p>
         </div>
 
-        {/* Cart Items */}
         <div className="overflow-x-auto">
           <table className="min-w-full border-collapse border border-gray-300 ">
             <thead className="bg-gray-100">
@@ -66,9 +86,9 @@ const InvoicePage = () => {
             </thead>
 
             <tbody>
-              {cart.items.map((item, index) => (
+              {cart?.items?.map((item, index) => (
                 <tr
-                  key={item.productId}
+                  key={item.id}
                   className={
                     index % 2 === 0
                       ? "bg-white"
@@ -111,8 +131,8 @@ const InvoicePage = () => {
           <button
             onClick={() => window.print()}
             className="bg-gradient-to-b from-yellow-400 to-yellow-500
-     text-white px-8 py-3 rounded-lg md:text-xl text-md 
-     hover:scale-105 hover:to-yellow-600 transition-all duration-300 cursor-pointer"
+      text-white px-8 py-3 rounded-lg md:text-xl text-md 
+      hover:scale-105 hover:to-yellow-600 transition-all duration-300 cursor-pointer"
           >
             Print Invoice
           </button>
@@ -120,13 +140,37 @@ const InvoicePage = () => {
           <button
             onClick={confirmOrder}
             className="bg-gradient-to-b from-orange-400 to-orange-500
-     text-white px-8 py-3 rounded-lg md:text-xl text-md 
-     hover:scale-105 hover:to-orange-600 transition-all duration-300 cursor-pointer"
+      text-white px-8 py-3 rounded-lg md:text-xl text-md 
+      hover:scale-105 hover:to-orange-600 transition-all duration-300 cursor-pointer"
           >
             Confirm Order
           </button>
         </div>
       </div>
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+          <div
+            className="bg-white rounded-2xl p-10 text-center max-w-sm w-full
+              transform scale-75 opacity-0 animate-scaleIn"
+          >
+            <h2 className="text-3xl font-bold text-orange-500 mb-4">
+              Thank You!
+            </h2>
+            <p className="text-gray-600">Your order has been confirmed.</p>
+
+            {/* Inline animation */}
+            <style>
+              {` @keyframes scaleIn {
+                  0% { transform: scale(0.75); opacity: 0; }
+                  100% { transform: scale(1); opacity: 1; }
+                }
+                .animate-scaleIn {
+                  animation: scaleIn 0.5s ease-out forwards;
+                }`}
+            </style>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

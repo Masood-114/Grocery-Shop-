@@ -1,28 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Banner from "../Banner/Banner";
 import Cards from "../Cards/Cards";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchProducts,
+  fillterByCategory,
+} from "../../Features/Products/ProductsSlice";
 
-export default function CategoryPages({
-  bannerTitle,
-  bgBanner,
-  categories = [],
-}) {
-  const [allProducts, setAllProducts] = useState([]);
-  async function dataApi() {
-    try {
-      const response = await fetch("http://localhost:3000/products");
-      const data = await response.json();
-      setAllProducts(data);
-    } catch (error) {
-      console.log("ProductsError", error);
-    }
-  }
+export default function CategoryPages({ bannerTitle, bgBanner, categories }) {
+  const dispatch = useDispatch();
+  const { list } = useSelector((state) => state.products);
   useEffect(() => {
-    dataApi();
-  }, []);
+    dispatch(fetchProducts());
+  }, [dispatch]);
+
   const filterProducts = categories.includes("All")
-    ? allProducts
-    : allProducts.filter((item) => categories.includes(item.category));
+    ? list
+    : list.filter((item) => categories.includes(item.category));
+
   const renderProducts = filterProducts.map((ele, index) => {
     return <Cards key={index} content={ele} />;
   });

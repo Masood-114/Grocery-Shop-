@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../../Context/CartContext";
 
 export default function ContactPage() {
-  const { contactData } = useContext(CartContext);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,7 +41,9 @@ export default function ContactPage() {
 
   return (
     <div className="max-w-[1400px] mx-auto p-5 py-35 px-10">
-      <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
+      <h1 className="text-3xl font-bold mb-6">
+        Contact <span className="text-orange-500">Us</span>{" "}
+      </h1>
 
       {success && (
         <p className="mb-4 text-green-600 font-semibold">
@@ -52,7 +53,7 @@ export default function ContactPage() {
 
       <form
         onSubmit={handleSubmit}
-        className=" shadow-md rounded-lg p-6 space-y-4 bg-gray-200"
+        className=" shadow-md rounded-lg p-6 space-y-4 bg-gray-100"
       >
         <div>
           <label className="block font-semibold mb-1">Name*</label>

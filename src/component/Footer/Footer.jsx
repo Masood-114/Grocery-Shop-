@@ -2,19 +2,8 @@ import { Link, useLocation } from "react-router";
 import { IoIosArrowForward } from "react-icons/io";
 
 function Footer() {
-  // const { pathname } = useLocation();
-  // if (
-  //   pathname === "/login" ||
-  //   pathname === "/register" ||
-  //   pathname === "/admin" ||
-  //   pathname === "/admin/product" ||
-  //   pathname === "/admin/order" ||
-  //   pathname === "*"
-  // )
-  //   return;
-
   return (
-    <footer className="bg-zinc-200 py-20">
+    <footer className="bg-zinc-200 py-20 mt-10">
       <div className=" flex flex-wrap max-w-[1400px] mx-auto px-10 ">
         <div className=" flex-1 basis-[300px]">
           <Link to={"#"} className=" text-3xl font-bold">

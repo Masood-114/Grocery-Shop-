@@ -21,6 +21,9 @@ import ProductMangement from "./component/Admin/ProductsMangement";
 import OrderManagement from "./component/Admin/OrderMangement";
 
 import ProtectedRoute from "./component/ProtectedRoute/ProtectedRoute";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { loadCart } from "./Features/Cart/CartSlice";
 
 export function PageNotFount() {
   return (
@@ -31,6 +34,10 @@ export function PageNotFount() {
 }
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadCart());
+  }, [dispatch]);
   const location = useLocation();
   const hideLayOutRoutes = [
     "/login",
@@ -51,7 +58,8 @@ function App() {
         <Route path="/fruits" element={<Fruits />} />
         <Route path="/dairy" element={<Dairy />} />
         <Route path="/seafood" element={<SeaFood />} />
-        <Route path="/allproduts" element={<AllProducts />} />
+        <Route path="/allproduts/:categories" element={<AllProducts />} />
+
         <Route path="/cart" element={<Cart />} />
         <Route path="/invoicepage" element={<InvoicePage />} />
         <Route path="/thankyou" element={<ThankYou />} />

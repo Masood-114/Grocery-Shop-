@@ -1,68 +1,49 @@
-import { useReducer, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import loginimage from "/assets/login.jpg";
 import Heading from "../../../Heading/Heading";
+import { useDispatch, useSelector } from "react-redux";
+import { loginUser } from "../../../../Features/User/UserSlice";
 
 const initialState = {
   password: "",
   email: "",
 };
-function myReducer(state, action) {
-  if (action.name) {
-    return {
-      ...state,
-      [action.name]: action.value,
-    };
-  }
-  if (action.type === "SET_ERROR") {
-    return {
-      ...state,
-      error: action.value,
-    };
-  }
-  if (action.type === "CLEAR_ERROR") {
-    return {
-      ...state,
-      error: "",
-    };
-  }
 
-  return state;
-}
 export default function LoginPage() {
   const navigate = useNavigate();
-
-  const [state, dispatch] = useReducer(myReducer, initialState);
-  console.log("LogIn_State", state);
+  const dispatch = useDispatch();
+  const [form, setForm] = useState(initialState);
+  const { user, loading, error } = useSelector((state) => state.user);
 
   const handleChange = (e) => {
-    dispatch({
-      name: e.target.name,
-      value: e.target.value,
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
     });
   };
+
+  useEffect(() => {
+    if (!user) return;
+
+    if (user.role === "admin") navigate("/admin");
+    else navigate("/");
+  }, [user, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!state.email || !state.password) {
-      dispatch({ type: "SET_ERROR", value: "Please fill all fields." });
-      return;
+    if (!form.email || !form.password) alert("Please put Email & Password");
+
+    const result = dispatch(loginUser(form));
+    if (loginUser.fulfilled.match(result)) {
+      const userData = result.payload;
+      localStorage.setItem("user", JSON.stringify(userData));
+      if (result.payload.role === "admin") navigate("/admin");
+      else navigate("/");
+    } else {
+      console.log("Login failed:", result.payload);
     }
-
-    dispatch({
-      type: "CLEAR_ERROR",
-    });
-
-    if (state.email === "admin@gmail.com" && state.password === "12345") {
-      localStorage.setItem("auth", true);
-      navigate("/admin");
-
-      return;
-    }
-    dispatch({ type: "SET_ERROR", value: "Invaild Admin pass." });
-    // Here you can add real login API
-    console.log("Login attempted:", state); // redirect to home after login
   };
 
   return (
@@ -75,9 +56,9 @@ export default function LoginPage() {
       <div className=" max-w-md w-full mx-auto  p-5 mt-10  ">
         <Heading highlight="Log" heading="In" />
 
-        {state.error && (
+        {error && (
           <p className="text-red-500 font-semibold text-center mb-4 mt-5 text-3xl">
-            {state.error}
+            {error}
           </p>
         )}
 
@@ -90,7 +71,7 @@ export default function LoginPage() {
             <input
               type="email"
               name="email"
-              value={state.email}
+              value={form.email}
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />
@@ -101,7 +82,7 @@ export default function LoginPage() {
             <input
               type="password"
               name="password"
-              value={state.password}
+              value={form.password}
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />

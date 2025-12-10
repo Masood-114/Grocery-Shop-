@@ -17,7 +17,7 @@ const OurProcess = () => {
         <div
           key={index}
           className={`flex-1 basis-[300px] ${
-            item.id % 2 === 0 ? "md:-mt-100" : ""
+            item.id % 2 === 0 ? "md:-mt-96" : ""
           }`}
         >
           <span

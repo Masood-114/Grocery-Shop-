@@ -8,7 +8,8 @@ import {
   Typography,
   TablePagination,
 } from "@mui/material";
-import { ProductsContext } from "../../Context/ProductContext";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../../Features/Products/ProductsSlice";
 
 const style = {
   position: "absolute",
@@ -23,8 +24,8 @@ const style = {
 };
 
 export default function AddProductModal({ open, onClose }) {
-  const { product, setProduct } = useContext(ProductsContext);
-
+  const { list } = useSelector((state) => state.products);
+  const dispatch = useDispatch();
 
   const [form, setForm] = useState({
     name: "",
@@ -53,8 +54,7 @@ export default function AddProductModal({ open, onClose }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newProduct),
     });
-
-    setProduct([...product, newProduct]);
+    dispatch(fetchProducts());
     onClose();
   };
 

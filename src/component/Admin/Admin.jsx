@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Box,
@@ -29,22 +29,42 @@ import {
   Notifications,
 } from "@mui/icons-material";
 import { Link, useNavigate } from "react-router";
-import { InvoiceContext } from "../../Context/InvoiceContext";
-import { ProductsContext } from "../../Context/ProductContext";
 import AdminGraph from "./Graph";
+import { useDispatch, useSelector } from "react-redux";
+import { loadInvoice } from "../../Features/Invoice/InvoiceSlice";
+import { fetchProducts } from "../../Features/Products/ProductsSlice";
+import { loadCart } from "../../Features/Cart/CartSlice";
+import { logOut } from "../../Features/User/UserSlice";
 
 export default function AdminDashboard() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const toggleDrawer = () => setMobileOpen(!mobileOpen);
   const navigate = useNavigate();
-  const { invoice, totalSale, totalOrder } = useContext(InvoiceContext);
-  const { totalProducts } = useContext(ProductsContext);
+  const { invoice } = useSelector((state) => state.invoice);
+  const { list } = useSelector((state) => state.products);
 
-  // Responsive query: true if screen is md or larger
-  const isMdUp = useMediaQuery("(min-width:960px)"); // 960px is md breakpoint
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadInvoice());
+    dispatch(fetchProducts());
+    dispatch(loadCart());
+  }, [dispatch]);
+
+  const totalSale =
+    invoice?.reduce((sum, inv) => {
+      const invoiceTotal = inv?.cart?.items?.reduce(
+        (itemSum, item) => itemSum + item.price * item.quantity,
+        0
+      );
+      return sum + invoiceTotal;
+    }, 0) || 0;
+  const totalOrder = invoice?.length || 0;
+  const totalProducts = list?.length || 0;
+
+  const isMdUp = useMediaQuery("(min-width:960px)");
 
   function handlerSinOut() {
-    localStorage.removeItem("auth");
+    dispatch(logOut());
 
     navigate("/login");
   }

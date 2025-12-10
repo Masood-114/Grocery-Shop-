@@ -1,7 +1,3 @@
-import { CartProvider } from "../../../Context/CartContext";
-import { CategoryProvider } from "../../../Context/CategoryContext";
-import { ProductsProvider } from "../../../Context/ProductContext";
-import { ProfessionalProvider } from "../../../Context/ProfessionalContext";
 import Category from "../../Category/Category";
 import Discount from "../../Discount/Discount";
 import Hero from "../../Hero/Hero";
@@ -14,18 +10,12 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <CategoryProvider>
-        <Category />
-      </CategoryProvider>
+      <Category />
       <Values />
-
       <Produts />
-
       <Discount />
       <OurProcess />
-      <ProfessionalProvider>
-        <Testimonials />
-      </ProfessionalProvider>
+      <Testimonials />
     </div>
   );
 };

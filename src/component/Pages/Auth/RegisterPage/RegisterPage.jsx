@@ -1,56 +1,34 @@
-import { useReducer } from "react";
+import { useEffect, useReducer, useState } from "react";
 import bgImage from "/assets/login.jpg";
 import { useNavigate } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { registerUser } from "../../../../Features/User/UserSlice";
 
 const initialState = {
   name: "",
   email: "",
   password: "",
   confirmPassword: "",
-  error: "",
-  success: "",
 };
-function myReducer(state, action) {
-  if (action.name) {
-    return { ...state, [action.name]: action.value };
-  }
-  if (action.type === "SET_ERROR") {
-    return {
-      ...state,
-      error: action.value,
-      success: "",
-    };
-  }
-  if (action.type === "CLEAR_ERROR") {
-    return {
-      ...state,
-      error: "",
-      success: "Registration successful!",
-    };
-  }
-  if (action.type === "SUCCESS") {
-    return {
-      ...state,
-      success: "",
-    };
-  }
-}
+
 export default function RegisterPage() {
-  const [state, dispatch] = useReducer(myReducer, initialState);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user, error, loading } = useSelector((state) => state.user);
+  const [form, setForm] = useState(initialState);
 
   const handleChange = (e) => {
-    dispatch({
-      name: e.target.name,
-      value: e.target.value,
+    if (!form) return null;
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic validation
-    if (!state.name || !state.email || !state.password) {
+    if (!form.name || !form.email || !form.password) {
       dispatch({
         type: "SET_ERROR",
         value: "Please fill in all required fields.",
@@ -59,7 +37,7 @@ export default function RegisterPage() {
       return;
     }
 
-    if (state.password !== state.confirmPassword) {
+    if (form.password !== form.confirmPassword) {
       dispatch({
         type: "SET_ERROR",
         value: "Passwords do not match.",
@@ -68,25 +46,26 @@ export default function RegisterPage() {
       return;
     }
 
-    const users = JSON.parse(localStorage.getItem("users" || []));
-    if (users.some((u) => u.email === state.email)) {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    if (users?.some((u) => u.email === form.email)) {
       dispatch({ type: "SET_ERROR", value: "Email already registered." });
       return;
     }
-
-    users.push({
-      name: state.name,
-      email: state.email,
-      password: state.password,
+    users?.push({
+      name: form.name,
+      email: form.email,
+      password: form.password,
       role: "user",
     });
 
     localStorage.setItem("users", JSON.stringify(users));
     // Here you can call API to save user
-    console.log("User registered:", state);
+    console.log("User registered:", form);
 
     // Reset form and show success
     dispatch({ type: "CLEAR_ERROR" });
+
+    dispatch(registerUser(form));
 
     navigate("/");
   };
@@ -101,15 +80,15 @@ export default function RegisterPage() {
       <div className="max-w-md w-full mx-auto p-5 mt-10">
         <h1 className="text-3xl font-bold text-center mb-6">Register</h1>
 
-        {state.error && (
+        {form.error && (
           <p className="mb-4 text-red-600 text-2xl font-semibold text-center">
-            {state.error}
+            {form.error}
           </p>
         )}
 
-        {state.success && (
+        {form.success && (
           <p className="mb-4 text-green-600 text-2xl font-semibold text-center">
-            {state.success}
+            {form.success}
           </p>
         )}
         <form
@@ -121,7 +100,7 @@ export default function RegisterPage() {
             <input
               type="text"
               name="name"
-              value={state.name}
+              value={form.name}
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />
@@ -132,7 +111,7 @@ export default function RegisterPage() {
             <input
               type="email"
               name="email"
-              value={state.email}
+              value={form.email}
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />
@@ -143,7 +122,7 @@ export default function RegisterPage() {
             <input
               type="password"
               name="password"
-              value={state.password}
+              value={form.password}
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />
@@ -156,7 +135,7 @@ export default function RegisterPage() {
             <input
               type="password"
               name="confirmPassword"
-              value={state.confirmPassword}
+              value={form.confirmPassword}
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />

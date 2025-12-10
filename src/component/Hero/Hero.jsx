@@ -20,7 +20,7 @@ function Hero() {
             all fresh and healthy.
           </p>
           <Button
-            onClick={() => navigate("/allproduts")}
+            onClick={() => navigate("/allproduts/All")}
             content={"Shop Now"}
           />
         </div>

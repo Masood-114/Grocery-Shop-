@@ -3,7 +3,7 @@
     {
       "id": "6",
       "name": "Shrimp",
-      "price": "3.5",
+      "price": 4.5,
       "category": "SeaFood",
       "image": "/assets/shrimp.png"
     },
@@ -139,6 +139,14 @@
       "price": "3.0",
       "category": "Vegetables",
       "image": "/assets/lettuce.png"
+    },
+    {
+      "id": "1765188952465",
+      "name": "Brent Key",
+      "price": 1,
+      "category": "SeaFood",
+      "image": "https://images.unsplash.com/photo-1633380110125-f6e685676160?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "iamge": "https://images.unsplash.com/photo-1633380110125-f6e685676160?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ],
   "professional": [
@@ -208,217 +216,851 @@
   ],
   "cart": [
     {
-      "id": "f351b94f-2f3f-4086-8808-f3f3117b6c1c",
-      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
+      "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+      "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
       "items": []
     }
   ],
   "invoice": [
     {
-      "id": "bb3fc8d2-f013-43af-8586-8048f01f8e0e",
-      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
-      "items": [
-        {
-          "productId": "1",
-          "name": "Strawberry",
-          "price": 3,
-          "image": "/assets/strawberry.png",
-          "quantity": 1
-        },
-        {
-          "productId": "2",
-          "name": "Butter",
-          "price": 3.5,
-          "image": "/assets/butter.png",
-          "quantity": 5
-        },
-        {
-          "productId": "3",
-          "name": "Eggs",
-          "price": 2.5,
-          "image": "/assets/eggs.png",
-          "quantity": 5
-        },
-        {
-          "productId": "4",
-          "name": "Cabbage",
-          "price": 3,
-          "image": "/assets/cabbage.png",
-          "quantity": 1
-        },
-        {
-          "productId": "8",
-          "name": "Green Capsicum",
-          "price": 4,
-          "image": "/assets/capsicum.png",
-          "quantity": 1
-        }
-      ],
-      "total": 40,
-      "createAt": "2025-11-20T06:17:31.016Z",
-      "status": "PAID"
+      "id": "9201",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "9",
+            "name": "Broccoli",
+            "price": 2,
+            "image": "/assets/broccoli.png",
+            "quantity": 6
+          }
+        ]
+      },
+      "total": 12,
+      "status": "PAID",
+      "date": "2025-12-08T13:31:31.304Z"
     },
     {
-      "id": "6ccb2a23-cfec-4cc3-bab3-f119b1bb3af6",
-      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
-      "items": [
-        {
-          "productId": "3",
-          "name": "Eggs",
-          "price": 2.5,
-          "image": "/assets/eggs.png",
-          "quantity": 11
-        }
-      ],
-      "total": 27.5,
-      "createAt": "2025-11-20T07:08:26.851Z",
-      "status": "PAID"
+      "id": "8454",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 1
+          },
+          {
+            "id": "8",
+            "name": "Green Capsicum",
+            "price": 4,
+            "image": "/assets/capsicum.png",
+            "quantity": 2
+          },
+          {
+            "id": "9",
+            "name": "Broccoli",
+            "price": 2,
+            "image": "/assets/broccoli.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 12.5,
+      "status": "PAID",
+      "date": "2025-12-09T12:22:35.317Z"
     },
     {
-      "id": "5ff2493b-1f26-4404-981c-37b6bfaadccd",
-      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
-      "items": [
-        {
-          "productId": "23",
-          "name": "Ricotta Cheese",
-          "price": 7,
-          "image": "/assets/ricotta-cheese.png",
-          "quantity": 10
-        }
-      ],
-      "total": 70,
-      "createAt": "2025-11-20T07:14:31.102Z",
-      "status": "PAID"
+      "id": "cd70",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "9",
+            "name": "Broccoli",
+            "price": 2,
+            "image": "/assets/broccoli.png",
+            "quantity": 1
+          },
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 7.5,
+      "status": "PAID",
+      "date": "2025-12-09T12:31:06.475Z"
     },
     {
-      "id": "04785c6a-17ea-4c46-8a48-f3343344a860",
-      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
-      "items": [
-        {
-          "productId": "10",
-          "name": "Yogurt",
-          "price": 3,
-          "image": "/assets/yogurt.png",
-          "quantity": 2
-        },
-        {
-          "productId": "14",
-          "name": "Mozzarella Cheese",
-          "price": 7,
-          "image": "/assets/cheese.png",
-          "quantity": 2
-        },
-        {
-          "productId": "15",
-          "name": "Condensed Milk",
-          "price": 5,
-          "image": "/assets/condensed-milk.png",
-          "quantity": 2
-        }
-      ],
-      "total": 30,
-      "createAt": "2025-11-21T05:14:00.835Z",
-      "status": "PAID"
+      "id": "7491",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "9",
+            "name": "Broccoli",
+            "price": 2,
+            "image": "/assets/broccoli.png",
+            "quantity": 1
+          },
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 7.5,
+      "status": "PAID",
+      "date": "2025-12-09T12:32:59.198Z"
     },
     {
-      "id": "2f1bd37d-4e98-4289-a357-d939c42affaf",
-      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
-      "items": [
-        {
-          "productId": "12",
-          "name": "Chicken Breast",
-          "price": 7,
-          "image": "/assets/chicken-breast.png",
-          "quantity": 1
-        },
-        {
-          "productId": "11",
-          "name": "Beef",
-          "price": 8,
-          "image": "/assets/beef.png",
-          "quantity": 2
-        },
-        {
-          "productId": "16",
-          "name": "Salmon Filet",
-          "price": 4,
-          "image": "/assets/salmon.png",
-          "quantity": 1
-        }
-      ],
-      "total": 27,
-      "createAt": "2025-11-21T05:46:48.918Z",
-      "status": "PAID"
+      "id": "72e7",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 5.5,
+      "status": "PAID",
+      "date": "2025-12-09T12:33:24.668Z"
     },
     {
-      "id": "e185edc4-006c-40ee-8d03-ef1ab86b36b8",
-      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
-      "items": [
-        {
-          "productId": "6",
-          "name": "Shrimp",
-          "price": 3.5,
-          "image": "/assets/shrimp.png",
-          "quantity": 4
-        },
-        {
-          "productId": "7",
-          "name": "Kiwi",
-          "price": 2.5,
-          "image": "/assets/kiwi.png",
-          "quantity": 3
-        },
-        {
-          "productId": "8",
-          "name": "Green Capsicum",
-          "price": 4,
-          "image": "/assets/capsicum.png",
-          "quantity": 3
-        }
-      ],
-      "total": 33.5,
-      "createAt": "2025-11-21T06:56:25.622Z",
-      "status": "PAID"
+      "id": "b3d3",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 5.5,
+      "status": "PAID",
+      "date": "2025-12-09T12:34:53.844Z"
     },
     {
-      "id": "012ffd4a-ac72-4ebf-8d92-b44da927cd65",
-      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
-      "items": [
-        {
-          "productId": "11",
-          "name": "Beef",
-          "price": 8,
-          "image": "/assets/beef.png",
-          "quantity": 1
-        }
-      ],
+      "id": "e978",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 5.5,
+      "status": "PAID",
+      "date": "2025-12-09T12:35:31.096Z"
+    },
+    {
+      "id": "a46b",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 5.5,
+      "status": "PAID",
+      "date": "2025-12-09T12:36:10.398Z"
+    },
+    {
+      "id": "96c0",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 5.5,
+      "status": "PAID",
+      "date": "2025-12-09T12:39:22.618Z"
+    },
+    {
+      "id": "c6fc",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 5.5,
+      "status": "PAID",
+      "date": "2025-12-09T12:42:55.345Z"
+    },
+    {
+      "id": "23fa",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 5.5,
+      "status": "PAID",
+      "date": "2025-12-09T12:45:18.059Z"
+    },
+    {
+      "id": "7136",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 5.5,
+      "status": "PAID",
+      "date": "2025-12-09T12:49:59.011Z"
+    },
+    {
+      "id": "39e6",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 42
+          }
+        ]
+      },
+      "total": 105,
+      "status": "PAID",
+      "date": "2025-12-09T12:50:51.640Z"
+    },
+    {
+      "id": "7bfe",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 42
+          }
+        ]
+      },
+      "total": 105,
+      "status": "PAID",
+      "date": "2025-12-09T13:10:24.560Z"
+    },
+    {
+      "id": "f2cd",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 42
+          }
+        ]
+      },
+      "total": 105,
+      "status": "PAID",
+      "date": "2025-12-09T13:11:32.977Z"
+    },
+    {
+      "id": "d7f0",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 3
+          }
+        ]
+      },
+      "total": 7.5,
+      "status": "PAID",
+      "date": "2025-12-09T13:13:19.018Z"
+    },
+    {
+      "id": "cc3e",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 3
+          }
+        ]
+      },
+      "total": 7.5,
+      "status": "PAID",
+      "date": "2025-12-09T13:14:08.524Z"
+    },
+    {
+      "id": "8c36",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 3
+          }
+        ]
+      },
+      "total": 7.5,
+      "status": "PAID",
+      "date": "2025-12-09T13:17:03.568Z"
+    },
+    {
+      "id": "0053",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 3
+          }
+        ]
+      },
+      "total": 7.5,
+      "status": "PAID",
+      "date": "2025-12-09T13:18:11.413Z"
+    },
+    {
+      "id": "63b8",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 3
+          }
+        ]
+      },
+      "total": 7.5,
+      "status": "PAID",
+      "date": "2025-12-09T13:29:51.329Z"
+    },
+    {
+      "id": "17ae",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 3
+          }
+        ]
+      },
+      "total": 7.5,
+      "status": "PAID",
+      "date": "2025-12-09T13:34:35.067Z"
+    },
+    {
+      "id": "1dbb",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 3
+          }
+        ]
+      },
+      "total": 7.5,
+      "status": "PAID",
+      "date": "2025-12-09T13:41:03.730Z"
+    },
+    {
+      "id": "1837",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 5
+          },
+          {
+            "id": "11",
+            "name": "Beef",
+            "price": 8,
+            "image": "/assets/beef.png",
+            "quantity": 1
+          },
+          {
+            "id": "6",
+            "name": "Shrimp",
+            "price": 4.5,
+            "image": "/assets/shrimp.png",
+            "quantity": 1
+          },
+          {
+            "id": "8",
+            "name": "Green Capsicum",
+            "price": 4,
+            "image": "/assets/capsicum.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 29,
+      "status": "PAID",
+      "date": "2025-12-09T13:43:45.294Z"
+    },
+    {
+      "id": "5d99",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "8",
+            "name": "Green Capsicum",
+            "price": 4,
+            "image": "/assets/capsicum.png",
+            "quantity": 1
+          },
+          {
+            "id": "9",
+            "name": "Broccoli",
+            "price": 2,
+            "image": "/assets/broccoli.png",
+            "quantity": 2
+          }
+        ]
+      },
       "total": 8,
-      "createAt": "2025-11-21T07:13:54.788Z",
-      "status": "PAID"
+      "status": "PAID",
+      "date": "2025-12-09T13:44:12.428Z"
     },
     {
-      "id": "9e4f556a-bc29-47d4-870d-8148c4a88750",
-      "deviceId": "6af12c85-92b3-4cc6-b087-d9d77a1a8b79",
-      "items": [
-        {
-          "productId": "7",
-          "name": "Kiwi",
-          "price": 2.5,
-          "image": "/assets/kiwi.png",
-          "quantity": 2
-        },
-        {
-          "productId": "8",
-          "name": "Green Capsicum",
-          "price": 4,
-          "image": "/assets/capsicum.png",
-          "quantity": 2
-        }
-      ],
+      "id": "5f62",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "11",
+            "name": "Beef",
+            "price": 8,
+            "image": "/assets/beef.png",
+            "quantity": 3
+          },
+          {
+            "id": "12",
+            "name": "Chicken Breast",
+            "price": 7,
+            "image": "/assets/chicken-breast.png",
+            "quantity": 1
+          },
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "10",
+            "name": "Yogurt",
+            "price": 3,
+            "image": "/assets/yogurt.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 37,
+      "status": "PAID",
+      "date": "2025-12-10T06:24:55.488Z"
+    },
+    {
+      "id": "ac2c",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "12",
+            "name": "Chicken Breast",
+            "price": 7,
+            "image": "/assets/chicken-breast.png",
+            "quantity": 1
+          },
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "10",
+            "name": "Yogurt",
+            "price": 3,
+            "image": "/assets/yogurt.png",
+            "quantity": 1
+          }
+        ]
+      },
       "total": 13,
-      "createAt": "2025-11-27T12:08:57.566Z",
-      "status": "PAID"
+      "status": "PAID",
+      "date": "2025-12-10T06:33:08.316Z"
+    },
+    {
+      "id": "dfff",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "12",
+            "name": "Chicken Breast",
+            "price": 7,
+            "image": "/assets/chicken-breast.png",
+            "quantity": 1
+          },
+          {
+            "id": "13",
+            "name": "Kale Leaves",
+            "price": 3,
+            "image": "/assets/kale.png",
+            "quantity": 1
+          },
+          {
+            "id": "10",
+            "name": "Yogurt",
+            "price": 3,
+            "image": "/assets/yogurt.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "total": 13,
+      "status": "PAID",
+      "date": "2025-12-10T06:51:41.528Z"
+    },
+    {
+      "id": "a25b",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "15",
+            "name": "Condensed Milk",
+            "price": 5,
+            "image": "/assets/condensed-milk.png",
+            "quantity": 2
+          },
+          {
+            "id": "18",
+            "name": "Milk Bottle (3)",
+            "price": 8,
+            "image": "/assets/milk.png",
+            "quantity": 2
+          }
+        ]
+      },
+      "total": 26,
+      "status": "PAID",
+      "date": "2025-12-10T06:59:05.877Z"
+    },
+    {
+      "id": "8ac5",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 3
+          }
+        ]
+      },
+      "total": 7.5,
+      "status": "PAID",
+      "date": "2025-12-10T08:38:06.645Z"
+    },
+    {
+      "id": "7277",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "8",
+            "name": "Green Capsicum",
+            "price": 4,
+            "image": "/assets/capsicum.png",
+            "quantity": 4
+          }
+        ]
+      },
+      "total": 16,
+      "status": "PAID",
+      "date": "2025-12-10T08:39:20.588Z"
+    },
+    {
+      "id": "0f85",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "8",
+            "name": "Green Capsicum",
+            "price": 4,
+            "image": "/assets/capsicum.png",
+            "quantity": 4
+          }
+        ]
+      },
+      "total": 16,
+      "status": "PAID",
+      "date": "2025-12-10T08:42:59.264Z"
+    },
+    {
+      "id": "9c45",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "7",
+            "name": "Kiwi",
+            "price": 2.5,
+            "image": "/assets/kiwi.png",
+            "quantity": 3
+          }
+        ]
+      },
+      "total": 7.5,
+      "status": "PAID",
+      "date": "2025-12-10T08:43:14.610Z"
+    },
+    {
+      "id": "d4be",
+      "cart": {
+        "id": "492e00a0-1793-41a9-8bab-4549804fbaee",
+        "deviceId": "3bb442b5-9d6f-4a99-8bff-e905b6176139",
+        "items": [
+          {
+            "id": "8",
+            "name": "Green Capsicum",
+            "price": 4,
+            "image": "/assets/capsicum.png",
+            "quantity": 3
+          }
+        ]
+      },
+      "total": 12,
+      "status": "PAID",
+      "date": "2025-12-10T08:43:51.101Z"
     }
   ],
-  "registerUser": []
+  "registerUser": [
+    {
+      "id": "86b7",
+      "name": "Hamilton Trujillo",
+      "email": "vilo@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!"
+    },
+    {
+      "id": "aae8",
+      "name": "Iris Chapman",
+      "email": "gocojawa@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!"
+    },
+    {
+      "id": "f110",
+      "name": "Sydnee Russell",
+      "email": "pyceqihyle@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!"
+    },
+    {
+      "id": "2d54",
+      "name": "Adam Barnes",
+      "email": "rasu@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!"
+    }
+  ],
+  "contact": []
 }

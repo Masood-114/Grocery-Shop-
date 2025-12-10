@@ -5,12 +5,16 @@ import Heading from "../Heading/Heading";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaStar } from "react-icons/fa6";
-import { useContext } from "react";
-import { ProfessionalContext } from "../../Context/ProfessionalContext";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchTestimonails } from "../../Features/Testimonails/TestimonailsSlice";
 
 function Testimonials() {
-  const { professional } = useContext(ProfessionalContext);
-
+  const dispatch = useDispatch();
+  const { list } = useSelector((state) => state.testimonials);
+  useEffect(() => {
+    dispatch(fetchTestimonails());
+  }, [dispatch]);
   return (
     <section>
       <div className="max-w-[1400px] mx-auto px-10 py-20">
@@ -37,7 +41,7 @@ function Testimonials() {
           modules={[Navigation]}
           className="mySwiper"
         >
-          {professional.map((ele, index) => {
+          {list.map((ele, index) => {
             return (
               <SwiperSlide key={index} className="bg-zinc-100 rounded-lg p-8">
                 <div className="flex gap-5 items-center">

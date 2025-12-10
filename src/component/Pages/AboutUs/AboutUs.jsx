@@ -1,15 +1,18 @@
 import { Link } from "react-router";
 
+
 export default function AboutUs() {
   return (
-    <div className="max-w-[1400px] mx-auto p-5  py-45 px-10">
-      <h1 className="text-4xl font-bold text-center mb-8">About Us</h1>
+    <div className="max-w-[1400px] mx-auto p-5  mt-40 px-10 bg-gray-100 rounded-3xl">
+      <h1 className="text-4xl font-bold text-center mb-8">
+        About <spam className="text-orange-500">Us</spam>
+      </h1>
 
       <div className="flex flex-col md:flex-row items-center gap-8">
         {/* Image section */}
         <div className="md:w-1/2">
           <img
-            src="/assets/about.jpg" // replace with your image path
+            src="/assets/about.jpg"
             alt="About Us"
             className="rounded-lg shadow-md w-full object-cover bg-gray-200"
           />
